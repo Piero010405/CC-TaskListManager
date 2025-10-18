@@ -79,9 +79,9 @@ for idx, status in enumerate(statuses):
                 if new_status != task["status"]:
                     update_task_status(task["_id"], new_status)
                     st.success("Estado actualizado ✅")
-                    st.experimental_rerun()
+                    st.rerun()
 
                 if st.button("🗑️ Eliminar", key=f"del-{task['_id']}"):
                     delete_task(task["_id"])
                     st.warning("Tarea eliminada 🗑️")
-                    st.experimental_rerun()
+                    st.rerun()
